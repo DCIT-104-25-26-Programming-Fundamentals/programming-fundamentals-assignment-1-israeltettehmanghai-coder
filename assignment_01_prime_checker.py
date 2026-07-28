@@ -10,7 +10,8 @@
 # A prime number is a whole number greater than 1 that has no divisors
 # other than 1 and itself (e.g., 2, 3, 5, 7, 11, 13 ...).
 #
-# -----------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------
 # EXPECTED INPUT / OUTPUT EXAMPLES
 # -----------------------------------------------------------------------------
 #
@@ -34,4 +35,25 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+x = ("prime number")
+y = ("Not a prime number")
+def is_prime(number):
+    if number <= 1:
+        return False
+    for i in range(2, int(number**0.5) + 1):
+        if number % i == 0:
+            return False
+    return True
+
+
+# code execution
+if __name__ == "__main__":
+    # ACCEPT INPUT FROM USER.
+    number = int(input("enter a number: "))
+    # calling the function
+    if is_prime(number):
+        print(f"{number} is a", x)
+    else:
+        print(F"{number} is", y) 
+
 
